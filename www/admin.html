@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="icon" type="image/x-icon" href="/www/img/logo-icon.ico">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Administrador</title>
+    </head>
+    <body style="grid-template-rows: auto !important;">
+        <div class="admin">
+            <div class="side">
+                <img src="/www/img/logo.png">
+                <button id="r-button" class="navbar-toggler bi bi-list" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                </button>
+                <br>
+                <div id="show-list">
+                <div class="container d-flex justify-content-center align-items-center">
+                <i class="bi bi-house-door-fill me-5"></i>
+                <a href="home.html"><div class="btn btn-sm btn-outline-info col-12 col-sm-12 col-md-2 col-lg-2 w-a">Home</div></a>
+                </div>
+            </div>
+            </div>
+            <div class="adm-view">test</div>         
+        </div>
+        <script src="js/index.js"></script>
+        <script src="cordova.js"></script>
+        <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const buttonpress = document.getElementById("r-button");
+    const slist = document.getElementById("show-list");
+
+    buttonpress.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        if (slist.style.display === "none") {
+            slist.style.display = "block";
+        } else {
+            slist.style.display = "none";
+        }
+    });
+});
+     </script>
+    </body>
+</html>
